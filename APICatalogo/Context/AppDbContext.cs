@@ -1,12 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using APICatalogo.Models;
 
 namespace APICatalogo.Context;
-
-public class AppDBContext : DBContext
+public class AppDbContext : DbContext
 {
-    public AppDBContext(DbContextOptions<AppDbContext> options) : base(options)
-    {}
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
 
-    public DBSet<Categoria>? Categorias { get; set; }
-    public DBSet<Produto>? Produtos { get; set; }
+    public DbSet<Categoria>? Categorias { get; set; }
+    public DbSet<Produto>? Produtos { get; set; }
 }
